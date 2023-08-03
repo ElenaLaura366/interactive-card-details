@@ -100,7 +100,7 @@ body{
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 100%;
-    width: 50%;
+    width: 70%;
 }
 
 .right{
@@ -116,14 +116,16 @@ body{
     background-size: 100%;
     display: flex;
     flex-direction: column;
-    width: 28.125rem;
+    width: 27rem;
     border-radius: 0.5rem;
     color: var(--White);
-    justify-content: center;
+    justify-content: end;
     height: 15rem;
+    position: relative;
+    right: 30%;
 }
 
-.first_card div{
+.first_card .name_date{
     display: flex;
     justify-content: space-around;
     padding: 1rem;
@@ -132,6 +134,7 @@ body{
 .first_card #card_code{
     margin: 0 auto;
     font-size: 1.5rem;
+    letter-spacing: 2px;
 }
 
 .first_card .big{
@@ -140,6 +143,7 @@ body{
     background-color: var(--White);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
+    margin-right: 0.5rem;
 }
 
 .first_card .small{
@@ -149,4 +153,12 @@ body{
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     border-radius: 100%;
+}
+
+.first_card .circles{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 30%;
+    left: 10%;
 }
