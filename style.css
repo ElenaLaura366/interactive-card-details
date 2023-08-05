@@ -87,12 +87,12 @@ select {
 body{
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
-    display: flex;
     font-weight: 500;
 }
 
 .container{
     display: flex;
+    flex-direction: column;
 }
 
 .left{
@@ -100,7 +100,12 @@ body{
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 100%;
-    width: 70%;
+    width: 35%;
+    height: 100vh;
+}
+
+.left_part{
+    display: flex;
 }
 
 .right{
@@ -109,11 +114,15 @@ body{
     justify-content: center;
 }
 
+.right_part{
+    display: flex;
+    position: absolute;
+}
+
 .first_card{
     background: url(images/bg-card-front.png);
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: 100%;
     display: flex;
     flex-direction: column;
     width: 27rem;
@@ -121,8 +130,10 @@ body{
     color: var(--White);
     justify-content: end;
     height: 15rem;
-    position: relative;
+    position: absolute;
     right: 30%;
+    left: 15rem;
+    top: 8rem
 }
 
 .first_card .name_date{
@@ -161,4 +172,108 @@ body{
     position: relative;
     bottom: 30%;
     left: 10%;
+}
+
+.second_card{
+    background: url(images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: flex;
+    flex-direction: column;
+    width: 27rem;
+    border-radius: 0.5rem;
+    color: var(--White);
+    justify-content: end;
+    height: 15rem;
+    position: absolute;
+    top: 26rem;
+    left: 20rem;
+}
+
+.second_card p{
+    position: absolute;
+    top: 44%;
+    right: 12%;
+}
+
+.form_section{
+    position: relative;
+}
+
+.form_section form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 20rem;
+    width: 25rem;
+}
+
+.form_section form label{
+    color: var(--Very_dark_violet);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 1.5rem 0 0.3rem 0;
+}
+
+.form_section form input{
+    border: 1px solid var(--Light_grayish_violet);
+    border-radius: 0.5rem;
+    padding: 5px;
+    
+}
+
+.form_section form input::placeholder{
+    color: var(--Light_grayish_violet);
+}
+
+#name, #card_number, #Exp_date, #CVC{
+    padding-left: 10px;
+}
+
+#submit{
+    color: var(--White);
+    background: var(--Very_dark_violet);
+}
+
+.section{
+    display: flex;
+}
+
+.section div:nth-child(2n+1){
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section div:nth-child(2n+1) input{
+    margin-right: 1rem;
+}
+
+.section div:nth-child(2n){
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.section label{
+    width: 100%;
+}
+
+.section input:nth-child(2n+1){
+    width: 35%;
+    margin-right: 1rem;
+}
+
+.section input:nth-child(2n){
+    width: 35%;
+}
+.section div:nth-child(2n) input{
+    width: 100%;
+}
+
+#submit{
+    padding: 0.7rem;
+    margin-top: 2rem;
 }
